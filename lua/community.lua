@@ -16,7 +16,7 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.test.vim-test" },
-  -- { import = "astrocommunity.test.neotest" },
+  -- { import = "astrocommunity.test.neotest" }, -- Neotest does not work on windows for python because of hard coded paths
   { import = "astrocommunity.test.nvim-coverage" },
   -- { import = "astrocommunity.workflow.bad-practices-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
