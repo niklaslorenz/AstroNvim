@@ -27,3 +27,6 @@ map("n", "ä", "]", opts)
 -- Visual mode
 map("v", "ü", "[", opts)
 map("v", "ä", "]", opts)
+
+-- Set python environment to handle utf-8 symbols for latex2text
+vim.env.PYTHONUTF8 = "1"

@@ -1,15 +1,13 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Treesitter
 
 ---@type LazySpec
+
 return {
   "nvim-treesitter/nvim-treesitter",
-  opts = {
-    ensure_installed = {
-      "lua",
-      "vim",
-      -- add more arguments for adding more treesitter parsers
-    },
-  },
+  opts = function(_, opts)
+    opts.ensure_installed = vim.list_extend(opts.ensure_installed or {}, { "latex" })
+    opts.auto_install = true
+  end,
 }
