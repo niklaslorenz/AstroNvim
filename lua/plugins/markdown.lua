@@ -5,6 +5,7 @@ return {
     -- configuration here or empty for defaults
   },
   keys = {
-    { "<leader>xx", "<cmd>MDTaskToggle<cr>", desc = "Toggle markdown task", mode = { "n" } },
+    { "<leader>xx", "<cmd>MDTaskToggle<cr>", mode = { "n" }, desc = "Toggle markdown task" },
+    { "<leader>vt", "<cmd>MDToc<cr>", mode = { "n" }, desc = "Show Table of Content" },
   },
 }
