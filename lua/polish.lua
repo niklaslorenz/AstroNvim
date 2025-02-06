@@ -27,3 +27,14 @@ map("n", "ä", "]", opts)
 -- Visual mode
 map("v", "ü", "[", opts)
 map("v", "ä", "]", opts)
+
+-- Set python environment to handle utf-8 symbols for latex2text
+vim.env.PYTHONUTF8 = "1"
+
+-- Refresh Markdown View when reading buffer
+vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
+  pattern = "*.md",
+  callback = function()
+    if vim.fn.exists(":RenderMarkdown") == 2 then vim.cmd("RenderMarkdown") end
+  end,
+})
