@@ -17,6 +17,7 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },

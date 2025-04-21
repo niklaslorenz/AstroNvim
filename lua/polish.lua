@@ -17,17 +17,6 @@
 --   },
 -- })
 
-local map = vim.keymap.set
-local opts = { remap = true, silent = true }
-
--- Normal mode
-map("n", "ü", "[", opts)
-map("n", "ä", "]", opts)
-
--- Visual mode
-map("v", "ü", "[", opts)
-map("v", "ä", "]", opts)
-
 -- Set python environment to handle utf-8 symbols for latex2text
 vim.env.PYTHONUTF8 = "1"
 
@@ -37,4 +26,13 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
   callback = function()
     if vim.fn.exists(":RenderMarkdown") == 2 then vim.cmd("RenderMarkdown") end
   end,
+})
+
+-- Rerender diagnostics after write when autosave disabled it
+local function redraw_diagnostics()
+  if vim.diagnostic.is_enabled({ bufnr = 0 }) then vim.diagnostic.show(nil, 0) end
+end
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  callback = function() vim.defer_fn(redraw_diagnostics, 100) end,
 })
