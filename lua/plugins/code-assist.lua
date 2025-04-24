@@ -3,4 +3,5 @@ return {
   config = function() require("code-assist") end,
   lazy = false,
   keys = {},
+  branch = "dev",
 }
