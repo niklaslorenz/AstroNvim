@@ -7,7 +7,7 @@ return {
     relative_chat_width = 0.4,
     relative_chat_height = 0.4,
     relative_chat_input_width = 0.4,
-    relative_chat_input_height = 0.4,
+    relative_chat_input_height = 0.2,
   },
   lazy = false,
   keys = {},
