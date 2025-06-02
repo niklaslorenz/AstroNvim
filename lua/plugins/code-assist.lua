@@ -2,8 +2,22 @@ return {
   "niklaslorenz/code-assist.nvim",
   --- @type CodeAssistOptions
   opts = {
-    model = "gpt-4o-mini",
-    system_message = "You are a helpful programming assistant.",
+    agents = {
+      {
+        name = "Alice/v0.1",
+        model = "gpt-4o-mini",
+        system_message = "You are Alice, an AI assistant that is designed to "
+          .. "assist the user to the best of your abilities. Always answer truthfully. "
+          .. "Do not speculate. Tell the user whenever you are not certain about how "
+          .. "to answer their question. Keep your answers concise and do not stop before "
+          .. "you answered the user's question. Unless the user specifies otherwise, you "
+          .. "can use markdown as text format. Make sure to always put programming code in"
+          .. "code blocks.",
+      },
+    },
+    default_agent = "Alice/v0.1",
+    default_model = "gpt-4o-mini",
+    default_system_message = "You are a helpful programming assistant.",
     relative_chat_width = 0.4,
     relative_chat_height = 0.4,
     relative_chat_input_width = 0.4,
