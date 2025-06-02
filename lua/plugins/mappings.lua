@@ -10,7 +10,12 @@ return {
         n = {
           ["<Tab>"] = { ":bnext<CR>" },
           ["<S-Tab>"] = { ":bprevious<CR>" },
-          ["<Leader>ui"] = function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ 0 }), { 0 }) end,
+          ["<Leader>ui"] = {
+            function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ 0 }), { 0 }) end,
+            silent = true,
+            desc = "Toggle inlay hints",
+          },
+          ["<Leader>lf"] = { function() vim.lsp.buf.format() end, silent = true, desc = "Format buffer" },
           ["ü"] = { "[", silent = true, remap = true, desc = "Previous" },
           ["ä"] = { "]", silent = true, remap = true, desc = "Next" },
           ["Ü"] = { "5<C-y>", silent = true, desc = "Scroll up 5" },
