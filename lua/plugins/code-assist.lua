@@ -23,7 +23,16 @@ return {
     relative_chat_input_width = 0.4,
     relative_chat_input_height = 0.2,
   },
-  lazy = false,
-  keys = {},
+  lazy = true,
+  keys = {
+    { "<Leader>a", nil, desc = "🗨 Code Assist" },
+    { "<Leader>an", nil, desc = "New" },
+    { "<Leader>anl", nil, desc = "New Listed Conversation" },
+    { "<Leader>anp", nil, desc = "New Project Conversation" },
+    { "<Leader>anu", nil, desc = "New Unlisted Conversation" },
+    { "<Leader>as", nil, desc = "Select" },
+    { "<Leader>asl", nil, desc = "Select Listed Conversation" },
+    { "<Leader>asp", nil, desc = "Select Project Conversation" },
+  },
   branch = "dev",
 }
