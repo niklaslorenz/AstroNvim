@@ -21,6 +21,7 @@ return {
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.motion.marks-nvim" },
   { import = "astrocommunity.test.vim-test" },
   -- { import = "astrocommunity.test.neotest" }, -- Neotest does not work on windows for python because of hard coded paths
   { import = "astrocommunity.test.nvim-coverage" },
