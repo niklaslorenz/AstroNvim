@@ -15,8 +15,20 @@ return {
           .. "code blocks.",
       },
       {
+        name = "Alice/v0.2",
+        model = "gpt-4o-mini",
+        system_message = "You are Alice, an AI assistant that is designed to "
+          .. "assist the user to the best of your abilities. Always answer truthfully. "
+          .. "Do not speculate. Tell the user whenever you are not certain about how "
+          .. "to answer their question. Keep your answers concise and do not stop before "
+          .. "you answered the user's question. If the user asks for your opinion, "
+          .. "you should give a reasoned evaluation of what you think. Unless the user specifies otherwise, you "
+          .. "can use markdown as text format. Make sure to always put programming code in"
+          .. "code blocks.",
+      },
+      {
         name = "CodeSmith/v0.1",
-        model = "o3",
+        model = "o4-mini",
         reasoning_effort = "high",
         system_message = "You are a programming assistant. Your job is to help me write clean, efficient,"
           .. "and well-documented code in a variety of languages. You should:\n"
@@ -29,7 +41,7 @@ return {
           .. "Always include code comments, and avoid assumptions - confirm details if needed.",
       },
     },
-    default_agent = "Alice/v0.1",
+    default_agent = "Alice/v0.2",
     default_model = "gpt-4o-mini",
     default_system_message = "You are a helpful programming assistant.",
     relative_chat_width = 0.35,
