@@ -36,3 +36,18 @@ end
 vim.api.nvim_create_autocmd("BufWritePost", {
   callback = function() vim.defer_fn(redraw_diagnostics, 100) end,
 })
+
+-- NOTE: Enable async autocompletions for all lsps
+require("cmp").setup({ async = true })
+
+-- NOTE: The java lsp takes very long to create autocompletions,
+-- so putting it on async prevents a lot of lag.
+
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "java",
+--   callback = function()
+--     require("cmp").setup.buffer({
+--       async = true,
+--     })
+--   end,
+-- })
