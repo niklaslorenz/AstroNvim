@@ -8,8 +8,11 @@
 return {
   "AstroNvim/astrocommunity",
   -- import/override with your plugins folder
+  { import = "astrocommunity.ai.sidekick-nvim" },
+  { import = "astrocommunity.ai.opencode-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.cyberdream-nvim" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
@@ -22,6 +25,8 @@ return {
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.marks-nvim" },
+  { import = "astrocommunity.scrolling.neoscroll-nvim" },
+  { import = "astrocommunity.scrolling.nvim-scrollbar" },
   { import = "astrocommunity.test.vim-test" },
   -- { import = "astrocommunity.test.neotest" }, -- Neotest does not work on windows for python because of hard coded paths
   { import = "astrocommunity.test.nvim-coverage" },
